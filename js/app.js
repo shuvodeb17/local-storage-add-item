@@ -1,9 +1,18 @@
+const displayLocalStorage = () => {
+    const product = getProduct();
+    for (const products in product) {
+        displayUi(products)
+    }
+}
 const addItemBtn = () => {
     const addBar = document.getElementById('add-bar');
     const addBarText = addBar.value;
-    console.log(addBarText);
+
+    // clear add bar
     addBar.value = '';
+
     displayUi(addBarText);
+    addProduct(addBarText);
 }
 // display UI
 const displayUi = productName => {
@@ -14,3 +23,24 @@ const displayUi = productName => {
     `
     ul.appendChild(li);
 }
+
+// local storage
+const getProduct = () => {
+    const product = localStorage.getItem('product');
+    let productCon;
+    if (product) {
+        productCon = JSON.parse(product);
+    } else {
+        productCon = {};
+    }
+    return productCon;
+}
+
+// add local storage
+const addProduct = name => {
+    const addProduct = getProduct();
+    addProduct[name] = 1;
+    const stringify = JSON.stringify(addProduct);
+    localStorage.setItem('product', stringify);
+}
+displayLocalStorage();

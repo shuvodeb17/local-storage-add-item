@@ -21,6 +21,7 @@ input#add-bar {
   border-radius: 5px;
   padding: 1rem 2rem;
   width: 28%;
+  height: 75vh;
 }
 input#add-bar {
   width: 74%;
@@ -65,7 +66,7 @@ button.place-order {
 
 ul#add {
   overflow: scroll;
-  height: 22vh;
+  height: 49vh;
 }
 
 @media screen and (max-width: 768px) {
