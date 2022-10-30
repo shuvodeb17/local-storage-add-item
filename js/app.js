@@ -7,7 +7,9 @@ const displayLocalStorage = () => {
 const addItemBtn = () => {
     const addBar = document.getElementById('add-bar');
     const addBarText = addBar.value;
-
+    if (!addBarText) {
+        return;
+    }
     // clear add bar
     addBar.value = '';
 
@@ -39,8 +41,17 @@ const getProduct = () => {
 // add local storage
 const addProduct = name => {
     const addProduct = getProduct();
-    addProduct[name] = 1;
+    if (addProduct[name]) {
+        addProduct[name] = addProduct[name] + 1;
+    } else {
+        addProduct[name] = 1;
+    }
     const stringify = JSON.stringify(addProduct);
     localStorage.setItem('product', stringify);
+}
+
+const placeOrder = () => {
+    document.getElementById('add').textContent = '';
+    localStorage.removeItem('product');
 }
 displayLocalStorage();

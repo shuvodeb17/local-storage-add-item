@@ -5,12 +5,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 div#wrapper {
-  background: #5196e1;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(76, 132, 229, 1) 0%,
+    rgba(76, 132, 229, 1) 33%,
+    rgba(103, 227, 203, 1) 100%
+  );
 }
 input#add-bar {
   width: 35%;
@@ -46,10 +51,10 @@ h1 {
   text-align: start;
 }
 li {
-  background: #8c4ae7;
+  background: #ddd;
   margin-bottom: 0.8%;
-  padding: 10px 9px;
-  color: #fff;
+  padding: 5px 9px;
+  color: #000;
   border-radius: 3px;
 }
 
@@ -66,7 +71,7 @@ button.place-order {
 
 ul#add {
   overflow: scroll;
-  height: 49vh;
+  height: 47vh;
 }
 
 @media screen and (max-width: 768px) {
