@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div#wrapper {
+  background: #5196e1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+input#add-bar {
+  width: 35%;
+  float: left;
+}
+.container {
+  background: #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  width: 28%;
+}
+input#add-bar {
+  width: 74%;
+  margin-right: 1%;
+  border: 1px solid #ddd;
+  padding: 7px 8px;
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+}
+button.add-item {
+  width: 25%;
+  padding: 8px 7px;
+  background: #8d4af0;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+h1 {
+  margin-bottom: 4%;
+  text-align: start;
+}
+li {
+  background: #8c4ae7;
+  margin-bottom: 0.8%;
+  padding: 10px 9px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+button.place-order {
+  margin-bottom: 7%;
+  width: 30%;
+  cursor: pointer;
+  padding: 8px 7px;
+  background: #8d4af0;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+ul#add {
+  overflow: scroll;
+  height: 22vh;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
